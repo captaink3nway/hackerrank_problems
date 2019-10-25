@@ -24,4 +24,13 @@ a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
 print(*product(a, b))
+
+
+#### R.Narayan (https://github.com/R-Narayan)
+-validating email
+###
+import re
+s=input()#to input many emails
+c=re.match(r'\w+@\w+mail\.com',s)
+print (c)
 ###
