@@ -16,3 +16,12 @@ s=input()#to input many emails
 c=re.findall(r'\w+@\w+mail\.com',s)
 print (c)
 ###
+
+#### R.Narayan (https://github.com/R-Narayan)
+-validating email
+###
+import re
+s=input()#to input many emails
+c=re.match(r'\w+@\w+mail\.com',s)
+print (c)
+###
