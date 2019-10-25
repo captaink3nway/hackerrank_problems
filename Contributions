@@ -25,3 +25,11 @@ s=input()#to input many emails
 c=re.match(r'\w+@\w+mail\.com',s)
 print (c)
 ###
+
+#### GauthamSree(https://github.com/GauthamSree)
+- Find the runner-Up Score
+###
+n = int(input())
+arr = map(int, input().split())
+print(sorted(list(set(arr)))[-2])
+###
