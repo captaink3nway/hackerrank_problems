@@ -65,3 +65,24 @@ if __name__ == '__main__':
         print(i)
 
 ###
+
+#### GauthamSree(https://github.com/GauthamSree)
+- Finding percentage 
+###
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    stud_avg = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    for k,v in student_marks.items():
+        s = 0
+        for i in v:
+            s += i
+        avg = s/len(v)
+        stud_avg[k] = avg
+    print(format(stud_avg[query_name],'.2f'))
+###
