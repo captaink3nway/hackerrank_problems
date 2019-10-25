@@ -33,3 +33,35 @@ n = int(input())
 arr = map(int, input().split())
 print(sorted(list(set(arr)))[-2])
 ###
+#### GauthamSree(https://github.com/GauthamSree)
+- Nested list
+###
+if __name__ == '__main__':
+    l = []
+    m = []
+    def mini(m):
+        mi = m[0]
+        for i in m:
+            if i != mi:
+                return i
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        l.append(name)
+        m.append(score)
+    for i in range(len(m)):
+        for j in range(len(m)-i-1):
+            if m[j] > m[j+1]:
+                m[j], m[j+1] = m[j+1], m[j]
+                l[j], l[j+1] = l[j+1], l[j]
+    
+    k = mini(m)
+    a = []
+    for i in range(len(m)):
+        if m[i]==k:
+            a.append(l[i])
+    a.sort()
+    for i in a:
+        print(i)
+
+###
