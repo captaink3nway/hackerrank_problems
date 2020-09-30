@@ -16,6 +16,15 @@ s=input()#to input many emails
 c=re.findall(r'\w+@\w+mail\.com',s)
 print (c)
 ###
+-Itertools
+###
+from itertools import product
+
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+
+print(*product(a, b))
+
 
 #### R.Narayan (https://github.com/R-Narayan)
 -validating email
