@@ -220,6 +220,118 @@ int next_permutation(int n, char **s)
     return 1;
 }
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int next_permutation(int n, char **s)
+{
+	/**
+	* Complete this method
+	* Return 0 when there is no next permutation and 1 otherwise
+	* Modify array s to its next permutation
+	*/
+    
+    // Find non-increasing suffix
+    int i = n-1;
+    while(i>0 && strcmp(s[i-1],s[i])>=0) 
+        i--;    // find key
+    if (i<=0) return 0;
+    
+    // Swap key with its successor in suffix
+    int j = n-1;
+    while(strcmp(s[i-1],s[j])>=0) 
+        j--;    // find rightmost successor to key
+    char *tmp = s[i-1];
+    s[i-1] = s[j];
+    s[j] = tmp;
+    
+    // Reverse the suffix
+    j = n-1;
+    while(i<j) {
+        tmp = s[i];
+        s[i] = s[j];
+        s[j] = tmp;
+        i++;
+        j--;
+    }
+    return 1;
+
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int next_permutation(int n, char **s)
+{
+	/**
+	* Complete this method
+	* Return 0 when there is no next permutation and 1 otherwise
+	* Modify array s to its next permutation
+	*/
+    
+    // Find non-increasing suffix
+    int i = n-1;
+    while(i>0 && strcmp(s[i-1],s[i])>=0) 
+        i--;    // find key
+    if (i<=0) return 0;
+    
+    // Swap key with its successor in suffix
+    int j = n-1;
+    while(strcmp(s[i-1],s[j])>=0) 
+        j--;    // find rightmost successor to key
+    char *tmp = s[i-1];
+    s[i-1] = s[j];
+    s[j] = tmp;
+    
+    // Reverse the suffix
+    j = n-1;
+    while(i<j) {
+        tmp = s[i];
+        s[i] = s[j];
+        s[j] = tmp;
+        i++;
+        j--;
+    }
+    return 1;
+
+}
+
+#### GauravPoosarla(https://github.com/GauravPoosarla)
+-Calculate nth term
+###
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+//Complete the following function.
+
+int find_nth_term(int n, int a, int b, int c) {
+    
+    if(n == 1)
+        return a;
+    else if (n == 2)
+        return b;
+    else if (n == 3)
+        return c;
+    
+    return find_nth_term(n-1,a,b,c)+find_nth_term(n-2,a,b,c)+find_nth_term(n-3,a,b,c);
+
+}
+
+int main() {
+    int n, a, b, c;
+    
+  
+    scanf("%d %d %d %d", &n, &a, &b, &c);
+    int ans = find_nth_term(n, a, b, c);
+ 
+    printf("%d", ans); 
+    return 0;
+}
+
+
 
 
 
