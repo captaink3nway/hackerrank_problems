@@ -218,7 +218,6 @@ int next_permutation(int n, char **s)
         j--;
     }
     return 1;
-
 }
 
 
