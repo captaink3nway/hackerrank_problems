@@ -455,8 +455,14 @@ if _name_ == '_main_':
     b = int(input())
     print(a+b)
     print(a-b)
-    print(a*b)
-  
+    print(a*b) 
+#### SahilKumar(https://github.com/sahilsync07)
+-loops
+###
+if _name_ == '_main_':
+    n = int(input())
+    for i in range(0,n):
+        print(i**2) 
 
 
 
