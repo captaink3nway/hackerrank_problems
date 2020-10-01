@@ -447,7 +447,15 @@ int main()
                 book++;
             *book = pages;
                     
-
+#### SahilKumar(https://github.com/sahilsync07)
+-Arithmetic Operators
+###
+if _name_ == '_main_':
+    a = int(input())
+    b = int(input())
+    print(a+b)
+    print(a-b)
+    print(a*b)
   
 
 
